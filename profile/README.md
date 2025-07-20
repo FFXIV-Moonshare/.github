@@ -1,38 +1,45 @@
 # 🌙 Moonshare
 
-**Moonshare** ist ein einfaches, modulares File-Sharing- und Kommunikationssystem für Final Fantasy XIV, entwickelt als Dalamud-Plugin. Es ermöglicht Spielern, sich über eine WebSocket-Verbindung zu verbinden und Dateien oder Informationen direkt mit anderen Spielern auszutauschen – schnell, leichtgewichtig und serverbasiert.
+**Moonshare** is a lightweight, modular file sharing and communication system for **FINAL FANTASY XIV**, built as a Dalamud plugin.  
+It allows players to connect to each other over WebSocket and exchange files or messages directly — fast, secure, and server-backed.
 
 ---
 
 ## 🚀 Features
 
-- 🔌 **WebSocket-basierte Verbindung zwischen Spielern**
-- 📂 **Dateifreigabe-System** (in Entwicklung)
-- 🧑‍🤝‍🧑 **Verbindung über eindeutige UserIDs**
-- 💬 **Nachrichtenübertragung und Sessions**
-- 💡 Integriert in Dalamud mit eigenem UI-Window
-- 🛡️ Geplante Erweiterung um Rechte-/Zugriffsmanagement und Authentifizierung
+- 🔌 **WebSocket-based peer connections**
+- 📂 **File sharing system** *(in development)*
+- 🧑‍🤝‍🧑 **UID-based player linking**
+- 💬 **Message and session exchange**
+- 💡 Fully integrated with Dalamud via a custom UI window
+- 🛡️ Planned extensions: authentication, permission management, access control
 
 ---
 
 ## 🧰 Installation
 
-### Voraussetzungen
+### Requirements
 
-- Dalamud-Plugin-System (XIVLauncher)
-- WebSocketSharp (für den Server)
-- .NET 6+ (für das Servermodul)
+- Dalamud Plugin System via XIVLauncher
+- .NET 8 or higher (for running the backend server)
+
+---
 
 ### Plugin Installation
 
-Das Plugin befindet sich derzeit in der Entwicklung und ist **noch nicht öffentlich über das Dalamud-Repo** verfügbar. Du kannst es manuell bauen und in deinen Plugin-Ordner legen:
+> 🚧 **Note:** Moonshare is currently under active development and is **not yet available through the official Dalamud plugin repo**. You can build and install it manually:
 
-1. Klone dieses Repository
-2. Baue das Projekt in Visual Studio mit dem Dalamud-Paketreferenzsystem
-3. Füge das Plugin in deinen Dalamud Plugins-Ordner ein
-4. Starte FFXIV mit XIVLauncher und aktiviere „Moonshare“
+1. Clone this repository  
+2. Open the solution in Visual Studio (with Dalamud references configured)  
+3. Build the plugin project  
+4. Place the output DLL in your Dalamud `DevPlugin` folder  
+5. Launch FFXIV with XIVLauncher and enable **Moonshare** via `/xlplugins`
 
-### Server starten
+---
+
+### Starting the Server
+
+To run the server locally (e.g., for testing your plugin build):
 
 ```bash
 dotnet run --project MoonshareServer
